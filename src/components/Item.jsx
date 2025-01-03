@@ -1,14 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import { useCart } from "../hooks/useCart";
 
-const Item = ({name, price}) => {
-    return (
-        <div className='item-card'>
-            <h4>Item Name: {name}</h4>        
-            <h4>Item Price: {price}</h4>
+const Item = ({ productName, productPrice }) => {
 
-            <button >Add to cart</button>        
-        </div>
-    )
+  const cart = useCart();
+
+  const handleAddCartEvent = () => {
+    cart?.setItems((prevState) => [...prevState, { productName, productPrice }]);
+  }
+
+
+  return (
+    <div className="box">
+      <h3>Name: {productName}</h3>
+      <h3>Price: {productPrice}</h3>
+      <button onClick={handleAddCartEvent}>Add to cart</button>
+    </div>
+  )
 }
 
 

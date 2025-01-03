@@ -7,3 +7,35 @@
 h1 {
     text-align: center;
 }
+
+button {
+    padding: 5px;
+}
+
+.box {
+
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.items,
+.cart {
+    border: 1px solid black;
+}
+
+.cart-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+}
+
+
+table, th, td {
+    border: 1px solid;
+}
+
+table {
+    width: 100%;
+}
